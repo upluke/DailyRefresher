@@ -1,10 +1,10 @@
 import React from 'react'
 import './HeaderBar.scss'
 
-export default () => {
+export default ({getInfo}) => {
   return (
     <div className="HeadBar">
-      <button>New Sentences</button>
+      <button onClick={getInfo}>New Sentences</button>
       <button>More Sentences</button>
     </div>
   )

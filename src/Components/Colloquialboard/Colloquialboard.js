@@ -22,9 +22,9 @@ export default () => {
     while(newInfo.length<numInfoToGet){
         let ranIdx=getRandomNum(0,initInfo.length-1)
        
-        if(initInfo.length===10){
+        if(initInfo.length===0){
           alert("we are out")
-          setInitInfo(...initInfo,[...infoBank])
+          setInitInfo([...infoBank])
         }else{
         newInfo.push(initInfo[ranIdx])
         initInfo.splice(ranIdx,1)

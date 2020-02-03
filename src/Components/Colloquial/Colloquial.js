@@ -1,9 +1,16 @@
 import React from 'react'
 import './Colloquial.scss'
 
-export default ({test}) => {
-  let testList = test.map(t => {
-    return <p>{t}</p>
+export default ({info}) => {
+   
+  try{
+  let testInfo = info.map(i=>{
+     return <p>{i.info}</p>
   })
-  return <div className="Colloquial">{testList}</div>
+  
+  return <div className="Colloquial">{testInfo}</div>
+  }catch(err){
+      alert(err)
+  }
+// return(<div></div>)
 }

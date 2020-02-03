@@ -1,24 +1,50 @@
-import React, {useState} from 'react'
+import React, {useState,useEffect} from 'react'
 import Headbar from '../HeaderBar/HeaderBar'
 import Colloquial from '../Colloquial/Colloquial'
 
 import infoBank from '../../infoBank'
 import './Colloquialboard.scss'
 
-export default () => {
-  const [testInfo, setTestInfo] = useState(infoBank)
-  const [numJokesToGet] = useState(5)
-  console.log(testInfo)
 
+export default () => {
+  let [initInfo, setInitInfo]=useState([...infoBank]) // copy infoBank data 
+  const [info, setInfo] = useState([]) // filtered info for to child 
+  const [numInfoToGet] = useState(5)
+
+ 
+  useEffect(()=>{
+      if(info.length===0) getInfo()
+  },[])
+  
   const getInfo=()=>{
-    console.log("get info")
+    
+    let newInfo=[]
+    while(newInfo.length<numInfoToGet){
+        let ranIdx=getRandomNum(0,initInfo.length-1)
+       
+        if(initInfo.length===10){
+          alert("we are out")
+          setInitInfo(...initInfo,[...infoBank])
+        }else{
+        newInfo.push(initInfo[ranIdx])
+        initInfo.splice(ranIdx,1)
+        }
+   
+    }
+    setInfo(newInfo)
+  }
+
+  const getRandomNum=(min, max)=>{
+      let ranNum=Math.floor(Math.random()*(max-min+1)+min);
+      return ranNum
   }
 
   return (
     <div className="Colloquialboard">
       <Headbar getInfo={getInfo}/>
 
-      <Colloquial test={testInfo} />
+      <Colloquial info={info} />
+     
     </div>
   )
 }

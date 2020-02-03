@@ -1,3 +1,6 @@
+
+
+
 export const infoBank=[
     {
         id:"ai_eighteen_1",
@@ -62,3 +65,46 @@ export const infoBank=[
 ];
 
 export default infoBank
+
+
+// export const infoBank=[
+   
+//     "frequency is the reciprocal of period.",
+//     "Today we're gonna watch the preliminary of one poppers.",
+//   "You're still stuffing your face while I'm talking to you.",
+//  "I thought she was of age.",
+//    "Direction, it carries the idea of something traveling in a certain direction like east weast north or south.",
+
+//     "To be honest, I still felt it's surreal.",
+
+//     "A handful of soil was strewn onto his coffin."
+// ,
+
+//     "He suffers from health problems, including hallucinations, tuberculosis and epilepsy."
+// ,
+
+//     "I think a big part of why schubert never achieved fame, I don't mean it in a harsh way but I think part of that was his personality."
+// ,
+
+  
+//     "He wasn't a very outgoing personality type. Actually he was quite the opposite. He's very shy and sort of anti-social so that didn't help him very much in the romance department."
+// ,
+
+//     "Obviously everything he touched turned to gold."
+// ,
+
+   
+//     "He was on the cusp of a new generation of musci, but being a transitional composer maybe some of his music didn't exactly resonate with the peiple of his time."
+// ,
+
+//     "Schubert died of typhoid fever. He didn't have either money or the inclination to travel."
+// ,
+
+//     "Violins are in a higher register than cellos."
+// ,
+
+//     "She will take him under her wing."
+
+// ];
+
+// export default infoBank

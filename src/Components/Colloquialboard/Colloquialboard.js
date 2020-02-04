@@ -10,29 +10,25 @@ export default () => {
   let [initInfo, setInitInfo]=useState([...infoBank]) // copy infoBank data 
   const [info, setInfo] = useState([]) // filtered info for to child 
   const [numInfoToGet] = useState(5)
-
- 
-  useEffect(()=>{
-      if(info.length===0) getInfo()
-  },[])
   
-  const getInfo=()=>{
-    
+  const getInfo=React.useCallback(()=>{
     let newInfo=[]
+    if(initInfo.length>0){
     while(newInfo.length<numInfoToGet){
         let ranIdx=getRandomNum(0,initInfo.length-1)
-       
-        if(initInfo.length===0){
-          alert("we are out")
-          setInitInfo([...infoBank])
-        }else{
         newInfo.push(initInfo[ranIdx])
         initInfo.splice(ranIdx,1)
         }
-   
-    }
+    }else{
+        alert("we are out")
+        setInitInfo([...infoBank])
+       }
     setInfo(newInfo)
-  }
+  })
+
+  useEffect(()=>{
+    if(info.length===0) getInfo()
+    },[getInfo, info.length])
 
   const getRandomNum=(min, max)=>{
       let ranNum=Math.floor(Math.random()*(max-min+1)+min);

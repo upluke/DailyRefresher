@@ -1,10 +1,22 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './Dropdown.scss'
 
-export default ()=>{
-    return(
-     <div className="dropdown">
+export default ({options,getNumbersOfInfo}) => {
+ 
+    const [value, setValue] = useState("");
+    const handleChange = event => {
+      setValue(event.target.value);
+      getNumbersOfInfo(event.target.value)
+    };
+  
     
-     </div>
-    )
-}
+    return (
+      <div className="dropdown">
+        <select id="lang" onChange={handleChange} value={value}>
+          {options.map(v => (
+            <option value={v.value}>{v.name}</option>
+          ))}
+        </select>
+      </div>
+    );
+  };

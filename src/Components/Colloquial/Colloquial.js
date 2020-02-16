@@ -5,7 +5,7 @@ export default ({info}) => {
    
   try{
   let testInfo = info.map(i=>{
-     return <p>{i.info}</p>
+     return <p className="info">{i.info}</p>
   })
   
   return <div className="Colloquial">{testInfo}</div>

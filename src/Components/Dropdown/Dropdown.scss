@@ -1,0 +1,22 @@
+.select-css{
+        display: inline-block;
+        padding: 1px;
+        font-size: 15px;
+        background-color: #3b5998;
+        color: white;
+        margin: 0px 15px 15px 15px;
+        cursor: pointer;
+        border-radius: 0.5rem;
+        transition-duration: 0.4s;
+        // appearance: none;
+    }
+ 
+    .select-css:hover {
+        background-color: #ffffff;
+        color: #3b5998;
+        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
+    }
+    .select-css:focus {
+        outline: none;
+    }
+  

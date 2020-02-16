@@ -12,7 +12,7 @@ export default ({options,getNumbersOfInfo}) => {
     
     return (
       <div className="dropdown">
-        <select id="lang" onChange={handleChange} value={value}>
+        <select className="select-css" onChange={handleChange} value={value}>
           {options.map(v => (
             <option value={v.value}>{v.name}</option>
           ))}

@@ -1,8 +1,21 @@
 .Colloquial{
-    background: yellow;
+    background: #dfe3ee;
+    color: #3b5998;
     width: 80%;
     display: inline-block;
-    height: 90%;
     overflow: scroll;
+    position: relative;
+    margin-bottom: 10%;
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .info{
+    border-bottom: 2px solid #f7f7f7;
+    padding: 1rem;
+    padding-top:0rem;
+  }
+
+  .info:last-child{
+    border-bottom: none;  
+    padding-bottom: 0.2rem;
   }
